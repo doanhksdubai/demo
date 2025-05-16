@@ -31,7 +31,7 @@
                                                     <td>${us.name}</td>
                                                    <td>${us.password}</td>
                                                     <td>
-                                                        <a class="btn btn-success" href="/admin/user/${us.id}">Xem</a>
+                                                        
                                                         <a class="btn btn-warning"
                                                             href="/admin/user/update/${us.id}">Sửa</a>
                                                         <a class="btn btn-danger"
