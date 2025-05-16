@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import demo.demo.entity.User;
 import demo.demo.service.UserService;
@@ -28,5 +30,17 @@ public class UserController {
 
         model.addAttribute("users", users);
         return "admin/user/show";
+    }
+
+    @GetMapping("/admin/user/create")
+    public String getCreateUser(Model model){
+        model.addAttribute("user", new User());
+        return "admin/user/create";
+    }
+    
+    @PostMapping("/admin/user/create")
+    public String createUser(@ModelAttribute("user") User user){
+        this.userService.SaveUser(user);
+        return "redirect:/admin/user";
     }
 }
