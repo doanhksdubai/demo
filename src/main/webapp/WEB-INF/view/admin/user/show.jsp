@@ -1,3 +1,6 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,5 +10,12 @@
 </head>
 <body>
     hello user 
+
+    <div>
+        <p>Id: ${user.id}</p>
+        <p>Email: ${user.email}</p>
+        <p>Name: ${user.name}</p>
+        <p>Password: ${user.password}</p>
+    </div>
 </body>
 </html>
