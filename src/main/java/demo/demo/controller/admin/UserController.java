@@ -1,5 +1,7 @@
 package demo.demo.controller.admin;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,9 +23,10 @@ public class UserController {
     @GetMapping("/admin/user")
     public String getUserPage(Model model){
 
-        User user = userService.GetUserById(1);
+        List<User> users = this.userService.GetAllUser();
 
-        model.addAttribute("user", user);
+
+        model.addAttribute("users", users);
         return "admin/user/show";
     }
 }

@@ -1,5 +1,7 @@
 package demo.demo.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import demo.demo.entity.User;
@@ -20,4 +22,9 @@ public class UserService {
     public User GetUserById(long id){
        return this.userRepository.findById(id);
     }
+
+
+   public List<User> GetAllUser(){
+    return this.userRepository.findAll();
+   }
 }
