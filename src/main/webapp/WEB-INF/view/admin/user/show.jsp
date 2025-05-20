@@ -35,7 +35,7 @@
                                                         <a class="btn btn-warning"
                                                             href="/admin/user/update/${us.id}">Sửa</a>
                                                         <a class="btn btn-danger"
-                                                            href="/admin/user/delete/${us.id}">Xóa</a>
+                                                            href="/admin/user/delete/${us.id}" onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">Xóa</a>
                                                     </td>
                                                 </tr>
                                             </c:forEach>

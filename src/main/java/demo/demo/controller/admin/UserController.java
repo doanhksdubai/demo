@@ -66,4 +66,11 @@ public class UserController {
         }
         return "redirect:/admin/user";
     }
+
+   
+    @GetMapping("/admin/user/delete/{id}")
+    public String deleteUser(@PathVariable long id){
+        this.userService.deleteUser(id);
+        return "redirect:/admin/user";
+    }
 }
